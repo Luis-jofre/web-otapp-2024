@@ -1,0 +1,30 @@
+// src/app/navbar.js
+import Link from 'next/link';
+import Image from 'next/image';
+import logo from '../img/logo.jpg'; 
+import './globals.css'; 
+
+const Navbar = () => {
+  return (
+    <nav className="nav">
+      <div className="logoContainer">
+        <Image src={logo} alt="Logo" width={50} height={50} />
+      </div>
+      <div className="navLinks">
+        <Link href="/" className="navLink">Inicio</Link>
+        <Link href="/funcionalidades" className="navLink">Funcionalidades</Link>
+        <Link href="/sobre-otapp" className="navLink">Sobre OTApp</Link>
+      </div>
+      <div className="buttonContainer">
+        <Link href="/demo">
+          <button className="demoButton">Agenda una demo</button>
+        </Link>
+        <Link href="/login">
+          <button className="loginButton">Login</button>
+        </Link>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

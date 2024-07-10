@@ -1,14 +1,18 @@
+/* globals.css */
+
+/* Importa Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Colores de tema */
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -24,6 +28,9 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 @layer utilities {
@@ -31,3 +38,179 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Otros estilos personalizados */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 8%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  background-color:white;
+  padding:10px;
+  border-radius: 15px;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espacio entre los enlaces */
+
+}
+
+.navLink {
+  color:white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #FFA500; /* Cambiar color al pasar el mouse */
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  margin-top:0px !important;
+}
+
+.demoButton {
+  background: rgb(251,200,86);
+  background: linear-gradient(180deg, rgba(251,200,86,1) 2%, rgba(233,147,76,1) 97%);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.loginButton {
+  background-color: transparent;
+  color:white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Estilos para el banner */
+.banner {
+  width: 100%;
+  height: auto;
+  margin-top:-100px;
+  min-height: 100vh;
+  background: rgb(56,131,212);
+  background: linear-gradient(90deg, rgba(56,131,212,1) 2%, rgba(120,211,202,1) 97%);
+}
+
+.bannerContainer {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 28vh;
+}
+
+.bannerText {
+  flex: 1;
+  font-size: 4rem;
+  font-weight: 600;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  line-height: 1.1;
+
+  .bannerlist {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.5;
+    color: white;
+  }
+  
+  .buttonContainer {
+    margin-top: 30px !important;
+  }
+  
+  .button {
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size:1rem;
+    font-weight: normal;
+    width: 12vw;
+  }
+  .button-secondary{
+    background-color: white;
+    color: rgb(28, 28, 28);
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size:1rem;
+    font-weight: normal;
+    width: 12vw;
+  }
+}
+
+
+
+.bannerVideo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+}
+
+.bannerVideo video {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*Propuesta de valor*/
+
+.content{
+  display:flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 1280px;
+  height: 10vh;
+  h2{
+    font-size: 2rem;
+    width: 100%;
+    padding-bottom:2vh;
+
+  }
+  .contentValor{
+    display:flex;
+    flex-direction: row;
+    gap:3rem;
+
+    .propuestaValor{
+      background-color:rgb(244, 244, 244);
+      width: 30%;
+      padding:30px;
+      border-radius: 25px;
+    }
+  }
+}
+
