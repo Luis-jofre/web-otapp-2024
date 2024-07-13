@@ -20,6 +20,7 @@
   }
 }
 
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -39,7 +40,7 @@ body {
   }
 }
 
-/* Otros estilos personalizados */
+/* Nav */
 .nav {
   display: flex;
   justify-content: space-between;
@@ -101,7 +102,7 @@ body {
   cursor: pointer;
 }
 
-/* Estilos para el banner */
+/* Banner */
 .banner {
   width: 100%;
   height: auto;
@@ -182,6 +183,7 @@ body {
 .bannerVideo video {
   max-width: 100%;
   height: auto;
+  
 }
 
 
@@ -195,7 +197,7 @@ body {
   max-width: 1280px;
   height: 10vh;
   h2{
-    font-size: 2rem;
+    font-size: 2.5rem;
     width: 100%;
     padding-bottom:2vh;
 
@@ -204,13 +206,52 @@ body {
     display:flex;
     flex-direction: row;
     gap:3rem;
+   
 
     .propuestaValor{
-      background-color:rgb(244, 244, 244);
+      background-color:rgb(251, 251, 251);
       width: 30%;
-      padding:30px;
+      padding:20px;
       border-radius: 25px;
+      border:solid 1px rgb(226, 226, 226);
+      .titleValor{
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
     }
   }
 }
 
+/*Funcionalidades*/
+/*Testimonios*/
+/*Footer*/
+
+.footer{
+  background-color: #0DB3CF;
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  color:white;
+
+
+
+}
+  .columnLarge{
+    flex: 0 0 40%;
+  }
+  .columnSmall {
+    flex: 0 0 30%;
+  }
+  .logo-footer-container{
+    background-color:red;
+    padding:20px;
+    width: 100%;
+    border-radius: 25px;
+  }
+  .Logo-footer{
+    background-color:red;
+    padding:20px;
+    width: 100%;
+    border-radius: 25px;
+  }

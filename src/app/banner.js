@@ -18,10 +18,13 @@ const Banner = () => {
           </div>
        </div>
           <div className="bannerVideo">
-            <video controls>
-              <source src="/path-to-your-video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <iframe 
+              width="560" height="315" 
+              src="https://www.youtube.com/embed/Xsc360OeQVA?si=Ce1jTzFEbBsLIsgA" 
+              title="YouTube video player" frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
           </div>
         </div>
       </div> 
