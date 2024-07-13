@@ -226,6 +226,9 @@ body {
 /*Testimonios*/
 /*Footer*/
 
+
+
+
 .footer{
   background-color: #0DB3CF;
   height: 40vh;
@@ -233,10 +236,15 @@ body {
   justify-content: space-between;
   padding: 20px;
   color:white;
-
-
+}
+.cont-footer{
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
 
 }
+
   .columnLarge{
     flex: 0 0 40%;
   }
@@ -255,3 +263,9 @@ body {
     width: 100%;
     border-radius: 25px;
   }
+  .firm{
+    background-color: rgb(58, 58, 58);
+    color:white;
+    text-align: center;
+  }
+
