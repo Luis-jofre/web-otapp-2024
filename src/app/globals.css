@@ -10,6 +10,21 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
+  --color-primary-blue: #0DB3CF;
+  --color-secondary-yellow:
+  --color-gray-50: 
+}
+/* Variables de color */
+:root {
+
+  --color-primary-blue: #0DB3CF;
+  --color-secondary-yellow:#FFA500;
+  --color-gray-low: rgb(193, 193, 193);
+  --color-white: white;
+  --color-black:rgb(36, 36, 36);
+  --gradient-primary: linear-gradient(90deg, rgba(56,131,212,1) 2%, rgba(120,211,202,1) 97%);
+  --gradient-secondary: linear-gradient(180deg, rgba(251,200,86,1) 2%, rgba(233,147,76,1) 97%)
+
 }
 
 @media (prefers-color-scheme: light) {
@@ -45,15 +60,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 10px 8%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.logoYnav{
+  display:flex;
+  flex-direction: row;
+  gap:2rem;
 }
 
 .logoContainer {
   display: flex;
   align-items: center;
-  background-color:white;
+  background-color: var(--color-white);
   padding:10px;
   border-radius: 15px;
 }
@@ -69,7 +88,7 @@ body {
   color:white;
   text-decoration: none;
   font-size: 16px;
-  padding: 10px 15px;
+  padding:8px;
   transition: color 0.3s ease;
 }
 
@@ -81,22 +100,24 @@ body {
   display: flex;
   align-items: center;
   margin-top:0px !important;
+  color:var(--color-white);
+  gap:1rem;
+
 }
 
 .demoButton {
-  background: rgb(251,200,86);
-  background: linear-gradient(180deg, rgba(251,200,86,1) 2%, rgba(233,147,76,1) 97%);
-  color: #fff;
+  background: var(--gradient-secondary);
+  color: var(--color-white);
   border: none;
   border-radius: 50px;
   padding: 10px 20px;
-  margin-right: 10px;
+  margin-top: 8px;
   cursor: pointer;
 }
 
 .loginButton {
   background-color: transparent;
-  color:white;
+  color:var(--color-white);
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -108,8 +129,10 @@ body {
   height: auto;
   margin-top:-100px;
   min-height: 100vh;
-  background: rgb(56,131,212);
-  background: linear-gradient(90deg, rgba(56,131,212,1) 2%, rgba(120,211,202,1) 97%);
+  background: var(--color-primary-blue);
+  background: var(--gradient-primary);
+  padding: 0px 8%;
+  
 }
 
 .bannerContainer {
@@ -117,26 +140,43 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding-top: 28vh;
+
+  
 }
 
 .bannerText {
-  flex: 1;
+  flex: 0 0 60%;
   font-size: 4rem;
   font-weight: 600;
-  color: white;
+  color: var(--color-white);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 20px;
+  padding-right: 12rem;
   line-height: 1.1;
+  
 
   .bannerlist {
     margin-top: 20px;
     font-size: 18px;
     font-weight: normal;
     line-height: 1.5;
-    color: white;
+    color: var(--color-white);
+  }
+
+  .bannerTextDisplay {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    font-size: 1.6rem;
+  }
+  
+  .fade-in {
+    opacity: 1;
+  }
+  
+  .fade-out {
+    opacity: 0;
   }
   
   .buttonContainer {
@@ -144,8 +184,8 @@ body {
   }
   
   .button {
-    background-color: #FFA500;
-    color: white;
+    background-color:var(--color-secondary-yellow);
+    color: var(--color-white);
     border: none;
     border-radius: 5px;
     padding: 15px 20px;
@@ -156,8 +196,8 @@ body {
     width: 12vw;
   }
   .button-secondary{
-    background-color: white;
-    color: rgb(28, 28, 28);
+    background-color: var(--color-white);
+    color: #054691;
     border: none;
     border-radius: 5px;
     padding: 15px 20px;
@@ -172,19 +212,38 @@ body {
 
 
 .bannerVideo {
-  flex: 1;
+  flex: 0 0 40%;
+  flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 255, 255); */
   border-radius: 25px;
+  overflow: hidden; 
+  
+
+  .downloadsApp{
+    width: 100% !important;
+    display: flex;
+    gap:1rem;
+    justify-content:center;margin-top:1rem
+   
+  }
+  button{
+    width: 100%;
+    min-width: auto !important;
+    color:var(--color-white);
+  }
+  iframe {
+    max-width: 100%;
+    height: 300px;
+    border-radius: 25px;    
+  }
+
 }
 
-.bannerVideo video {
-  max-width: 100%;
-  height: auto;
-  
-}
+
+
 
 
 /*Propuesta de valor*/
@@ -195,11 +254,13 @@ body {
   width: 100%;
   max-width: 1280px;
   height: 10vh;
+  padding: 5rem 8%;
+
   h2{
     font-size: 3rem;
     font-weight: 500;
     line-height: 3.5rem;
-    width: 40%;
+    width: 60%;
     padding-bottom:2vh;
     margin-bottom: 4rem;
 
@@ -208,27 +269,39 @@ body {
     display:flex;
     flex-direction: row;
     gap:4rem;
+
    
 
     .propuestaValor{
       /* background-color:rgb(251, 251, 251); */
       width: 30%;
       border-radius: 25px;
+      
 
       h3{
         font-size: 1.5rem;
         font-weight: 400;
         padding:0.5rem 0 1rem 0;
+        line-height: 1.5rem;
   
       }
       icons{
-        color:#0DB3CF;
+        color: var(--color-primary-blue);
       }
     }
   }
 }
 
 /*Funcionalidades*/
+.contenedorFuncionalidad{
+background-color: var(--color-gray-low);
+padding: 5rem 8%;
+h2{
+  font-size: 2.5rem;
+}
+
+
+}
 /*Testimonios*/
 /*Footer*/
 
@@ -236,12 +309,12 @@ body {
 
 
 .footer{
-  background-color: #0DB3CF;
+  background-color: var(--color-primary-blue);
   height: 40vh;
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  color:white;
+  color:var(--color-white);
 }
 .cont-footer{
   display: flex;
@@ -255,14 +328,7 @@ body {
   }
 
 
-  button{
-    border: solid 1px white;
-    border-radius: 10px;
-    padding: 8px 20px 15px 20px;
-    margin: 0px 0px 10px 0px;
-    min-width: 230px;
-    text-align: left;
-  }
+
 
 }
 
@@ -271,26 +337,7 @@ body {
   }
   .columnSmall {
     flex: 0 0 25%;
-    button{
-      display:flex;
-      flex-direction: row;
-      align-items: center;
-      padding-left: 20px;
-    }
-
-      h3{font-size: 1.5rem;}
-      h4{font-size: 0.8rem;}
-      .text-button{
-        line-height: 1.1rem;
-        display: flex;
-        flex-direction: column;
-      }
-      .social{
-        display: flex;
-        flex-direction: row;
-        gap:0.6rem;
-
-      }
+   
 
   }
   .logo-footer-container{
@@ -306,11 +353,44 @@ body {
 
 
   }
+
+  button{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    min-width: 240px;
+    color:var(--color-white);
+    border: solid 1px var(--color-white);
+    border-radius: 10px;
+    padding: 8px 20px 15px 20px;
+    margin: 0px 0px 10px 0px;
+    min-width: 230px;
+    text-align: left;
+ 
+
+    h3{font-size: 1.5rem;}
+    h4{font-size: 0.8rem;}
+
+    .text-button{
+      line-height: 1.1rem;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+    .social{
+      display: flex;
+      flex-direction: row;
+      gap:0.6rem;
+
+    }
+    
   .firm{
-    background-color: rgb(36, 36, 36);
+    background-color: var(--color-black);
     font-size: 0.8rem;
     font-weight: 300;
-    color: rgb(193, 193, 193);
+    color: var(--color-gray-low);
     justify-content: center;
     align-content: center;
     align-items: center;

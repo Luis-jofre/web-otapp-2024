@@ -1,6 +1,9 @@
 const Funcionalidades = () => {
     return (
-      <div>Funcionalidades</div>
+      <div className="contenedorFuncionalidad">
+        <h2>Funcionalidades</h2>
+
+        </div>
     );
   };
   

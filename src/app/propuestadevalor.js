@@ -3,7 +3,7 @@ import { FaRegArrowAltCircleRight } from 'react-icons/fa';
 const Propuestadevalor = () => {
 
     return (
-       <div className="flex min-h-screen flex-col items-center justify-between p-24">
+       <div className="flex min-h-screen flex-col">
         <div class="content">
        
         <h2>Por qué tu empresa debería utilizar Otapp</h2>
