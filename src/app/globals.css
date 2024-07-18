@@ -20,6 +20,7 @@
   --color-primary-blue: #0DB3CF;
   --color-secondary-yellow:#FFA500;
   --color-gray-low: rgb(193, 193, 193);
+  --color-gray-medium: rgb(91, 91, 91);
   --color-white: white;
   --color-black:rgb(36, 36, 36);
   --gradient-primary: linear-gradient(90deg, rgba(56,131,212,1) 2%, rgba(120,211,202,1) 97%);
@@ -35,6 +36,12 @@
   }
 }
 
+/* Font-size */
+
+p {
+  font-size: 18px;
+  color: var(--color-black)
+}
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -197,7 +204,7 @@ body {
   }
   .button-secondary{
     background-color: var(--color-white);
-    color: #054691;
+    color: var(--color-black);
     border: none;
     border-radius: 5px;
     padding: 15px 20px;
@@ -253,24 +260,40 @@ body {
   flex-direction: column;
   width: 100%;
   max-width: 1280px;
-  height: 10vh;
   padding: 5rem 8%;
+  
+
+ 
+  
 
   h2{
-    font-size: 3rem;
+    color: var(--color-primary-blue);
+    font-size: 1.5rem;
     font-weight: 500;
-    line-height: 3.5rem;
+    line-height: 3rem;
+
+ 
     width: 60%;
+
+  }
+  h3{
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 2.8rem;
+    width: 80%;
     padding-bottom:2vh;
-    margin-bottom: 4rem;
+
+  }
+  p{
 
   }
   .contentValor{
     display:flex;
     flex-direction: row;
     gap:4rem;
-
-   
+    padding-top:5rem;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 
     .propuestaValor{
       /* background-color:rgb(251, 251, 251); */
@@ -293,16 +316,69 @@ body {
 }
 
 /*Funcionalidades*/
-.contenedorFuncionalidad{
-background-color: var(--color-gray-low);
-padding: 5rem 8%;
-h2{
-  font-size: 2.5rem;
-}
+.contFuncion{
+  display: flex;
+  flex-direction: row;
+  padding-top: 4rem;
+  gap:10rem;
+
+
+  .funcionalidades{
+    width: 50%;
+
+
+    .cajaContenido{
+      display: flex;
+      flex-direction: column;
+      background:var(--color-white);
+      -webkit-box-shadow: 2px 2px 54px -23px rgba(0,0,0,0.45);
+      -moz-box-shadow: 2px 2px 54px -23px rgba(0,0,0,0.45);
+      box-shadow: 2px 2px 54px -23px rgba(0,0,0,0.45);
+      padding:10px 50px 20px 50px;
+      margin: 30px 0px 10px 0px;
+
+      border-radius: 15px;
+      h3{
+        font-size: 1.3rem;
+        font-weight: bold;
+        padding-bottom: 0px;
+      }
+     
+    }
+  
+  }
+
+  .circle{
+    width: 500px;
+    height: 500px;
+    border-radius: 900px;
+    background-color: var(--color-primary-blue);
+    position: absolute;
+    z-index: -1;
+  }
+  .mockup{
+    width: 50%;
+    justify-content: center;
+
+  }
 
 
 }
+
 /*Testimonios*/
+
+.testimoniosgrupo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .testimonio{
+    background-color: var(--color-gray-low);
+    min-height: 500px;
+    gap:1rem;
+    padding:2rem;
+
+  }
+}
 /*Footer*/
 
 

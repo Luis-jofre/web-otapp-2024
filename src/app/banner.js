@@ -34,7 +34,7 @@ const Banner = () => {
       <div className="banner">
         <div className="bannerContainer">
           <div className="bannerText">
-            <h1>Gestiona tus ordenes de trabajo digitales</h1>
+            <h1>Crea ordenes de trabajo digitales</h1>
         
             <ul className="bannerlist">
             <li className={`bannerTextDisplay ${fadeClass}`}>

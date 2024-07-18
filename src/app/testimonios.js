@@ -1,6 +1,27 @@
 const Testimonios = () => {
     return (
-      <div>Testimonios</div>
+      <div className="content">
+        
+        <div className="testimoniosgrupo"> 
+                <div className="testimonio">   
+                    Hola mundo
+                </div>  
+                <div className="testimonio">   
+                Hola mundo
+
+                </div>  
+                <div className="testimonio">   
+                Hola mundo
+
+                </div> 
+                <div className="testimonio">   
+                Hola mundo
+
+                </div>   
+
+        </div>
+        
+    </div>
     );
   };
   
